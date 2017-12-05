@@ -14,9 +14,8 @@ public class AdventOfCode_Day5_2 {
             int readVal;
 
             try {
-               // BufferedReader br = new BufferedReader(new FileReader
-               //         ("/home/lance/AdventOfCode_Day5/Input/AdventOfCode_Day5_Input.txt"));
-                BufferedReader br = new BufferedReader(new FileReader("/home/lance/AdventOfCode_Day5/Input/aoc2.txt"));
+                BufferedReader br = new BufferedReader(new FileReader
+                        ("/home/lance/AdventOfCode_Day5/Input/AdventOfCode_Day5_Input.txt"));
 
                 while ((thisLine = br.readLine()) != null) {
                     mazeArray[mazeEnd] = Integer.valueOf(thisLine);
@@ -29,15 +28,12 @@ public class AdventOfCode_Day5_2 {
             }
             while( sp >= 0 && sp <= mazeEnd){
                 readVal = mazeArray[sp];
-                System.out.println(sp+ " " + mazeArray[sp] + " " + stepCount);
 
-                if(Math.abs(readVal) >= 3) {
+                if(readVal >= 3) {
                     mazeArray[sp]  --;
                 } else {
                     mazeArray[sp]  ++;
                 }
-                System.out.println(sp+ " " + mazeArray[sp] + " " + stepCount);
-
 
                 sp = sp + readVal;
 
