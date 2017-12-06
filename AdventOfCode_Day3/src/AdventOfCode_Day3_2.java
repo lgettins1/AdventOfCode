@@ -32,14 +32,14 @@ public class AdventOfCode_Day3_2 {
                             CurrY = CurrY + 1;
                         }
                     }
-                    for(int ql = 0; ql < 3; ql ++) {
-                        for (int ql2 = 0; ql2 < 3; ql2++) {
-                            curval = curval + grid[CurrX - 1 + ql][CurrY - 1 + ql2];
+                    for(int ql = -1; ql <= 1; ql ++) {
+                        for (int ql2 = -1; ql2 <= 1; ql2++) {
+                            curval = curval + grid[CurrX + ql][CurrY + ql2];
                         }
                     }
                     grid[CurrX][CurrY] = curval;
                     if(curval > TargetVal) {
-                        System.out.println(CurrX + " " + CurrY + " " + sqsize + " " + curval);
+                        System.out.println("The answer is " + curval);
                     }
                 }
             }
