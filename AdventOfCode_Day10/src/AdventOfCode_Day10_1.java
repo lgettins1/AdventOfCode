@@ -23,7 +23,6 @@ public class AdventOfCode_Day10_1 {
                 circleList[ql2] = ql2;
             }
             for(skipDist = 0; skipDist < lengthCount; skipDist ++){
-                System.out.println(lengths[skipDist] + " " + curpos);
                 int cps[] = new int[lengths[skipDist]];
                 for(int ql3 = 0; ql3 < lengths[skipDist]; ql3 ++){
                     int cpos = curpos + ql3;
