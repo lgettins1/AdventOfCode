@@ -32,7 +32,7 @@ public class AdventOfCode_day13_1 {
         }
 
 
-        int delay = 9;
+        int delay = 1;
         int maxSeverity = 2000;
         while(maxSeverity > 0 ) {
             int passZero = 0;
@@ -40,12 +40,14 @@ public class AdventOfCode_day13_1 {
                 for(int b = 2; b < 4; b ++){
                     layers[b][a] = 1;
                 }
-            }
+
             severity = 0;
             if(delay > 0){
-                for(int ql = 1; ql <=delay; ql ++){
-                    advanceScanners();
+                initScanners(delay);
                 }
+            if(delay % 10000 == 0){
+                System.out.println(delay);
+            }
             }
             for (int move = 0; move <= layerCount; move++) {
 
@@ -86,5 +88,14 @@ public class AdventOfCode_day13_1 {
             layers[2][ql] += layers[3][ql];
         }
     }
-
+    public static void initScanners(int delay){
+        for (int ql = 0; ql < lineCount; ql++) {
+            int mod = delay % (2 * (layers[1][ql] - 1));
+            if(mod > 0 ) {
+                for int(ql2 = 1; ql2 <= mod){
+                    advanceScanners();
+                }
+            }
+        }
+    }
 }
