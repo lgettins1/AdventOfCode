@@ -3,7 +3,7 @@ import java.io.FileReader;
 
 public class AdventOfCode_Day8_1 {
     public static void main(String[] args) throws Exception {
-        String[] sa = new String[10];
+        String[] sa;
         String line;
         String probinput[][] = new String[7][1001];
         int linecount = 0;
@@ -107,20 +107,13 @@ public class AdventOfCode_Day8_1 {
                         varvals[vvi] = modval - moddelta;
                         break;
                 }
-
-
             }
             for(int ql = 1; ql <= varcount; ql ++){
                 if (varvals[ql] > maxval){
                     maxval = varvals[ql];
                 }
             }
-
-
         }
-        for(int ql = 1; ql <=varcount; ql ++){
-            System.out.println(varlist[ql] + " = " + varvals[ql]);
-        }
-        System.out.println(" max variable value was " + maxval);
+           System.out.println(" max variable value was " + maxval);
     }
 }
