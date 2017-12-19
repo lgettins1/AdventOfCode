@@ -92,11 +92,7 @@ public class AdventOfCode_Day18_1 {
 
                     break;
             }
-            System.out.print(curpos);
-            for(int ql = 1; ql <= varCount; ql ++){
-                System.out.print( " " +varArray[ql] + " = " + varVals[ql]);
-            }
-            System.out.println();
+
             if((curpos < 0) | (curpos > lineCount - 1)){
                 System.out.println(" break " + curpos);
             }
