@@ -20,6 +20,7 @@ public class AdentOfCode_Day19_1 {
         int XD = 0;
         int YD = 1;
         String word ="";
+        int stepCount = 1;
         for(int ql = 0; ql < maze[0].length(); ql ++){
             if(maze[0].charAt(ql) == '|'){
                 curX = ql;
@@ -31,17 +32,19 @@ public class AdentOfCode_Day19_1 {
             curX += XD;
             curY += YD;
             nextchar = maze[curY].charAt(curX);
-            System.out.println(curX + "," + curY + " " + nextchar);
 
             switch(nextchar){
             case '|':
+                stepCount ++;
                 break;
 
             case '-':
+                stepCount ++;
                 break;
 
             case ' ':
                 System.out.println(word);
+                System.out.println(stepCount);
                 exit = 1;
             case '+':
                 int XC = XD * XD;
@@ -54,11 +57,13 @@ public class AdentOfCode_Day19_1 {
                     XD = YC;
                     YD = XC;
                 }
+                stepCount ++;
                 break;
 
             default:
                 word += nextchar;
                 System.out.println(word);
+                stepCount ++;
 
                 break;
         }
