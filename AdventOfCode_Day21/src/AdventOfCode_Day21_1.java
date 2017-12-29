@@ -6,7 +6,7 @@ public class AdventOfCode_Day21_1 {
     public static int c2 = 0;
 
     public static void main(String[] args) throws Exception{
-        String[] curray = new String[30];
+        String[] curray = new String[2200];
         String line;
         String[] sa;
         String sInput = ".#./..#/###";
@@ -21,14 +21,14 @@ public class AdventOfCode_Day21_1 {
            }
            c2 ++;
        }
-       String results[] = new String[20];
+       String results[] = new String[2200];
        String r1[];
        r1 = sInput.split("/");
        for(int q = 0; q < r1.length; q++){
            results[q] = r1[q];
        }
 
-       for(int loop = 0; loop < 5; loop++){
+       for(int loop = 0; loop < 18; loop++){
            int modval;
            for(int copyarray = 0; copyarray < results[0].length(); copyarray++) {
                curray[copyarray] = results[copyarray];
